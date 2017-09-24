@@ -15,7 +15,6 @@ function showMas() {
     a.innerHTML = mas;
 }
 showMas();
-console.log(mas);
 
 //2.	Добавьте в предыдущую программу два элемента input, в которые можно ввести индекс массива и значение. По нажатию “ОК” - массив выводится.
 
@@ -28,29 +27,40 @@ function add() {
     znachMas = parseInt('znachMas');
     mas[indexMas] = znachMas;
     showMas();
-    console.log(mas);
 }
 
 //3.    Добавьте кнопку pop реализующую метод pop() для введенного выше массива. 
 
+document.getElementById('pop').onclick = metPop;
+
 function metPop() {
     mas.pop();
+    showMas();
 }
-metPop();
-console.log(mas);
 
 //4.	Добавьте кнопку shift реализующую метод shift() для введенного выше массива. 
 
+document.getElementById('shift').onclick = metShift;
+
 function metShift() {
     mas.shift();
+    showMas();
 }
-metShift();
-console.log(mas);
 
 //5     Добавьте кнопку push реализующую метод push() для введенного выше массива. 
 
+document.getElementById('push').onclick = metPush;
+
 function metPush() {
     mas.push('newTextPush');
+    showMas();
 }
-metPush();
-console.log(mas);
+
+//6     Добавьте кнопку push реализующую метод unshift() для введенного выше массива. 
+
+document.getElementById('unshift').onclick = metUnshift;
+
+function metUnshift() {
+    mas.unshift('newTextPush');
+    showMas();
+}
