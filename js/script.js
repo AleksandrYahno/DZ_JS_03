@@ -22,9 +22,9 @@ document.getElementById('go').onclick = add;
 
 function add() {
     var indexMas = document.getElementById('inpi').value;
-    indexMas = parseInt('indexMas');
-    var znachMas = document.getElementById('inpz').vslue;
-    znachMas = parseInt('znachMas');
+    indexMas = parseInt(indexMas);
+    var znachMas = document.getElementById('inpz').value;
+    znachMas = parseInt(znachMas);
     mas[indexMas] = znachMas;
     showMas();
 }
@@ -52,7 +52,8 @@ function metShift() {
 document.getElementById('push').onclick = metPush;
 
 function metPush() {
-    mas.push('newTextPush');
+    var znachMas = document.getElementById('inpz').value;
+    mas.push(znachMas);
     showMas();
 }
 
@@ -61,6 +62,7 @@ function metPush() {
 document.getElementById('unshift').onclick = metUnshift;
 
 function metUnshift() {
-    mas.unshift('newTextPush');
+    var znachMas = document.getElementById('inpz').value;
+    mas.unshift(znachMas);
     showMas();
 }
